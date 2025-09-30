@@ -12,13 +12,11 @@ try:
     browser.get(link)
 
 
-    # Ваш код, который заполняет обязательные поля
+    # people_radio selected
     people_radio = browser.find_element(By.ID, "peopleRule")
     people_checked = people_radio.get_attribute("checked")
     print("value of people radio: ", people_checked)
     assert people_checked=='true', "People radio is not selected by default"
-
-
 
     x_element = browser.find_element(By.CSS_SELECTOR, '#input_value')
     x = x_element.text
